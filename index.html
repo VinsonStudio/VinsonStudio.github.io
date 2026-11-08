@@ -3,62 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vinson Huang | 个人主页</title>
+<title>Vinson Huang · 状态页</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: #e2e8f0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  }
-  .card {
-    text-align: center;
-    padding: 3rem 2.5rem;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 1.5rem;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-    max-width: 560px;
-    margin: 1rem;
-  }
-  .avatar {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 1.5rem;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #38bdf8, #818cf8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #fff;
-  }
-  h1 { font-size: 2.25rem; margin-bottom: 0.75rem; color: #f8fafc; }
-  p { font-size: 1.1rem; line-height: 1.8; color: #cbd5e1; margin-bottom: 1.75rem; }
-  a {
-    display: inline-block;
-    padding: 0.75rem 1.75rem;
-    border-radius: 999px;
-    background: #38bdf8;
-    color: #0f172a;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  a:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(56, 189, 248, 0.4); }
+  :root{--bg:#0b0f14;--card:#131a22;--line:#223041;--txt:#e6edf3;--dim:#8b98a5;--acc:#39c5cf;--ok:#3fb950;--warn:#d29922}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--txt);font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;padding:28px 16px 48px}
+  .wrap{max-width:880px;margin:0 auto}
+  header{text-align:center;margin-bottom:26px}
+  .avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#39c5cf,#7c5cd6);display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:700;margin:0 auto 12px}
+  h1{font-size:26px;margin-bottom:6px}
+  .sub{color:var(--dim);font-size:14px}
+  h2{font-size:18px;margin:26px 0 12px;padding-left:8px;border-left:3px solid var(--acc)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .card b{font-size:15px}
+  .card p{color:var(--dim);font-size:13px;margin-top:5px;line-height:1.55}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
+  .ok{background:var(--ok)}.warn{background:var(--warn)}
+  .tag{display:inline-block;background:#1c2836;border:1px solid var(--line);color:var(--acc);border-radius:999px;font-size:12px;padding:2px 9px;margin:2px 3px 0 0}
+  ol.hot{padding-left:20px;line-height:1.9;font-size:14px}
+  ol.hot span{color:var(--dim);font-size:12px}
+  a{color:var(--acc);text-decoration:none}
+  footer{text-align:center;color:var(--dim);font-size:12px;margin-top:34px;line-height:1.8}
 </style>
 </head>
 <body>
-  <main class="card">
+<div class="wrap">
+  <header>
     <div class="avatar">V</div>
-    <h1>Vinson Huang</h1>
-    <p>你好，我是 Vinson Huang。</p>
-    <a href="https://github.com/VinsonStudio" target="_blank" rel="noopener">访问我的 GitHub</a>
-  </main>
+    <h1>Vinson Huang · 个人状态页</h1>
+    <div class="sub">vinsonhuang.dpdns.org ｜ 由 Muse 维护 ｜ 更新于 2026-11-08</div>
+  </header>
+
+  <h2>🛰 Muse 服务状态</h2>
+  <div class="grid">
+    <div class="card"><b><span class="dot ok"></span>Gmail</b><p>已连接 · 每日日报数据源</p></div>
+    <div class="card"><b><span class="dot ok"></span>日历</b><p>Google Calendar + 飞书日历均已打通</p></div>
+    <div class="card"><b><span class="dot ok"></span>GitHub</b><p>@VinsonStudio 已连接 · 本站托管于 GitHub Pages</p></div>
+    <div class="card"><b><span class="dot ok"></span>每日日报</b><p>每天 09:36 推送：重要邮件 + 日程 + 科技新闻</p></div>
+    <div class="card"><b><span class="dot ok"></span>宝可梦自动续领</b><p>每月 3 号自动执行 · 下次 2026-12-03</p></div>
+    <div class="card"><b><span class="dot warn"></span>muse.ai 邮箱</b><p>资格待开放 · 已排 3 次自动复查（11-09 起）</p></div>
+  </div>
+
+  <h2>🧰 我的空间</h2>
+  <div class="grid">
+    <div class="card"><b>🐑 羊毛空间 WOOL ARCADE</b><p>羊毛雷达（LINUX DO / V2EX / 小众软件 / NodeSeek 每小时刷新）· eSIM VAULT · 接码号码指南</p><span class="tag">薅羊毛</span><span class="tag">每小时更新</span></div>
+    <div class="card"><b>🛰 节点空间 NODE SPACE</b><p>四家节点统一管理：宝可梦 / Cloady / Proton / Windscribe · 订阅状态 · 到期提醒 · 公益节点来源</p><span class="tag">70+ 接入点</span><span class="tag">20+ 国家地区</span></div>
+  </div>
+
+  <h2>🌐 节点信息</h2>
+  <div class="grid">
+    <div class="card"><b>宝可梦机场</b><p>入门精灵球 · 60 GB/月 · 已激活<br>到期：2026-12-08（每月自动续领）</p></div>
+    <div class="card"><b>Cloady 自建节点</b><p>VLESS + WS + TLS · 美国东部 · 运行中<br>账单 $0.00 · 长期免费档</p></div>
+    <div class="card"><b>Proton VPN Free</b><p>10 个国家 · 无限流量 · 免费版自动分配节点</p></div>
+    <div class="card"><b>Windscribe Free</b><p>10 GB/月 · 11 个接入点（含香港）· 可自选节点</p></div>
+  </div>
+
+  <h2>🔥 今日热点 · 2026-11-08</h2>
+  <div class="card">
+    <ol class="hot">
+      <li>OpenAI 完成 110 亿美元首笔融资，估值 1.25 万亿美元 <span>— AIHOT / 彭博</span></li>
+      <li>Anthropic 拟感恩节前 IPO，估值预期下调至 1.25–1.75 万亿 <span>— AIHOT</span></li>
+      <li>Meta 在 Muse 推出 Spaces 并升级模型 <span>— AIHOT</span></li>
+      <li>DeepSeek 推出「创作者模式」，强化 AI 智能体能力 <span>— 虎嗅</span></li>
+      <li>苹果披露机器人 HALO 进展：基于千问模型在宇树 G1 上验证 <span>— C114</span></li>
+    </ol>
+  </div>
+
+  <h2>🌍 我的地盘</h2>
+  <div class="grid">
+    <div class="card"><b>vinsonhuang.dpdns.org</b><p>本站域名 · DigitalPlat 免费注册 · 2027-11-08 到期</p></div>
+    <div class="card"><b>vinsonstudio.github.io</b><p>GitHub Pages 本站镜像地址</p></div>
+    <div class="card"><b>hopo.eu.org</b><p>EU.org 永久免费域名 · 人工审批中 · 每日轮询</p></div>
+  </div>
+
+  <footer>
+    本站为公开状态页，不含任何账号密码、订阅链接等敏感信息。<br>
+    <a href="https://github.com/VinsonStudio">github.com/VinsonStudio</a>
+  </footer>
+</div>
 </body>
 </html>
