@@ -68,15 +68,15 @@
     <div class="card"><b><span class="dot ok"></span>Windscribe Free</b><p>10 GB/月 · 每月 8 号重置 · 可自选节点<br>接入点：美国（东/西/中）· 加拿大 · 英国 · 香港 · 法国 · 德国 · 荷兰 · 瑞士 · 挪威 · 罗马尼亚</p><span class="tag">可自选 · 含香港</span></div>
   </div>
 
-  <h2>🔗 节点连接（机主自愿公开）</h2>
-  <div class="grid">
-    <div class="card"><b>宝可梦机场 · 订阅（主）</b><p style="word-break:break-all">https://link123.52pokemon66.cc/api/v1/client/subscribe?token=59f4e92ece76f5b9d6b776c359156dd6</p><button class="cpbtn" data-cp="https://link123.52pokemon66.cc/api/v1/client/subscribe?token=59f4e92ece76f5b9d6b776c359156dd6">复制</button></div>
-    <div class="card"><b>宝可梦机场 · 订阅（备用）</b><p style="word-break:break-all">https://jkun.1qqdg.cn/api/v1/client/subscribe?token=59f4e92ece76f5b9d6b776c359156dd6</p><button class="cpbtn" data-cp="https://jkun.1qqdg.cn/api/v1/client/subscribe?token=59f4e92ece76f5b9d6b776c359156dd6">复制</button></div>
-    <div class="card"><b>Cloady 自建 · Clash 订阅</b><p style="word-break:break-all">https://dockerfile-lzy5oiaw-vinson-huang.cloady.io/clash</p><button class="cpbtn" data-cp="https://dockerfile-lzy5oiaw-vinson-huang.cloady.io/clash">复制</button></div>
-    <div class="card"><b>Cloady 自建 · VLESS 直连</b><p style="word-break:break-all">vless://a98ad52c-df99-4836-aad4-5fad9c15d35c@dockerfile-lzy5oiaw-vinson-huang.cloady.io:443?encryption=none&amp;security=tls&amp;type=ws&amp;host=dockerfile-lzy5oiaw-vinson-huang.cloady.io&amp;path=%2Fairport#Cloady-Free-Node</p><button class="cpbtn" data-cp="vless://a98ad52c-df99-4836-aad4-5fad9c15d35c@dockerfile-lzy5oiaw-vinson-huang.cloady.io:443?encryption=none&security=tls&type=ws&host=dockerfile-lzy5oiaw-vinson-huang.cloady.io&path=%2Fairport#Cloady-Free-Node">复制</button></div>
-    <div class="card"><b>Cloady 面板</b><p style="word-break:break-all">https://dockerfile-lzy5oiaw-vinson-huang.cloady.io</p><button class="cpbtn" data-cp="https://dockerfile-lzy5oiaw-vinson-huang.cloady.io">复制</button></div>
-    <div class="card"><b>Proton / Windscribe</b><p>App 登录型，无订阅链接。<br>Proton 账号：vinsonhuang@proton.me<br>Windscribe 用户名：vinsonhuang2026</p></div>
+  <h2>🔗 节点连接（密码访问）</h2>
+  <div class="card" id="vaultbox">
+    <b>🔒 本区已加密</b>
+    <p>输入访问密码，查看订阅链接与直连链接（AES-256 加密，密码不对什么都看不到）。</p>
+    <input id="vpw" type="password" placeholder="访问密码" style="width:100%;background:#0d1319;border:1px solid var(--line);border-radius:8px;color:var(--txt);padding:10px 12px;font-size:14px;margin-top:10px">
+    <button class="cpbtn" id="vunlock" style="padding:8px 22px">解锁</button>
+    <p id="vmsg" style="margin-top:8px"></p>
   </div>
+  <div class="grid" id="vaultgrid" style="display:none"></div>
 
   <h2>🔥 今日热点 · 2026-11-08</h2>
   <div class="card">
@@ -97,7 +97,7 @@
   </div>
 
   <footer>
-    本站为公开状态页；上方节点链接为机主本人自愿公开，账号密码不在本站。<br>
+    本站为公开状态页；节点链接已加密，需访问密码查看，账号密码不在本站。<br>
     <a href="https://github.com/VinsonStudio">github.com/VinsonStudio</a>
   </footer>
 </div>
@@ -109,6 +109,33 @@ document.addEventListener('click',function(e){
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(s).then(done).catch(function(){fallback();});} else {fallback();}
   function fallback(){var t=document.createElement('textarea');t.value=s;document.body.appendChild(t);t.select();try{document.execCommand('copy');done();}catch(_){}document.body.removeChild(t);}
 });
+</script>
+<script>
+var VBLOB="BVqECQThSHfwCEX9ajtm+cYc0wsu1cIGMGhn2dFyimSRnLRmbK185AWdAEz18ubo9ip3xUVylo5WAUlOLJPt5mbCSAGWVzK80eFx61pagq8UHF9JHRHqmoSTiuXrxOpraRnSvDoHcLE6kJeZ8cv0fLU0bisN/dgOp3HMxaR0FLmK2ljDOtTV3PUuPtyTOc507AfF/vRDWxAYYZ9LeoIgFK4zJyHaocFdkIl80fhgIcGB12sKAcLh+/KPlMOYESlTlh/jhO19uM9urDgHKNIwfM/wOtLzEHgIXOXsGqLYYO8oTQmyyRazBZmz4lyzyqtbCvS3m97KOlldD3rh1Duk1f6ugyXq1asnsKS+Qwq05APrI5uSRfB4FTjNsVLkljpQkBftXlOclrAGso0SfyRx6XLe9SW/3EEqz0pMtQBpxP3YdKp5ndem2pxjfPuGI91nYQRpqSwUOo1kEUDmdYe+tHx/fFP1c91DEaLiNb5drEH9u3BJJiNrjVwW6HeleLEpEXmhO+hfzkNsEboMZG7rMZ/2anaBgl7w8fipjHV6Zr5wgMQq8XGeyMa9FyZwIUHedrx4jKp4J82WoMT+0xyvd1qCmgk9nti6W2QGVxRx8FsPAlaQ3DilkjcAYqa9dpBXkK1K4KWIr9SlLRWbOEYwF+2N2llEgTt4xhgQMtvf6OzJNiU+nupp7B/6FnwQQEm4n+oUeFLUPpyKMX0K+eDC0YHnLlJF6m5an8/yHcFqjiaxOoKF9YwpyzHPiWHmSaghnnJmkqcsO30hHMhl7iU/gIh7RZ7VITF1aJbnHds33p06giOxv3OK/66KcIPrFUuah60HWp3Z5WwB9Xc7Ql6vYG+wmwY10EF5dPxct9dLke5qUqPst+EET5KBCfytLrlD0pUU1zR+9wQ2d9n11OkbOBeuLlHBClnY8eoIlXFSMYSuyWXk0cJrYm+1LwqAvmu5YCv/YICepc59UVuYv8loNTm7ix7u/CXcsWJ3LA6+ttzykQkrCLkqEk5vBdQZiY3tUNu+YDIvGP2gh56pig/SRGSV+qCGjzEzxzllrEH99qHRxU5yzqgGI2/Qs6yNK6Qj271aNuclZ/WO2yfTHHI9How0owelmtrVkRDYyyATEVH3pUBjwnK8c0PJBD4EDj0g0cAZ0HA9f75MjetXOqdI5UO1+5Fxin/DQagYyJYrYDHQY3WoBp0nPQ/fJuiBD6QMU3IfsQ+gMCcVzQrvlNkm93VLylog2a8jhR8jx3nAa2/QXm2MeFWaRCzWiehHWKMyH1V6r09TPcUVlPcIi1Us9r0VaR4GCLtfvDjeKf9vVwesK6WKARoNMwPl82BC3pEh9YEXdkKatduyeDQaw9LaC8PZqKHquT8EU+N3h6zC1474F7IT7hpxB39zKpf267RGvtposloG3PPKMjq34o/KnzVPFVOAIQHyPRWgMIqVnA4+S2qZxSF7LaXQTbIpBuu3XdQ82JQ26ygf8D6EjuOUdsMWiW2gMOFuVNYXj/fL38V4dZUNDE3VFR7+K8N9oy7aexWTY/uk199jWLbJkCSlUDUBM6F/sMdZf+Qn+6DqHnhSSi+ow8+th0IbAioI9L5hpMgVu7lnB7KEiq/TUYnlLhomFU1SHENglMzRXmQgy5aAcFWbp7a8BSPObfbb4zPKhzNq4dAmJ3H/O1rF+AUwLjaW7aGa8Lqm0L3H3IcVts/Tgmz+MVNw3r+PKVLdLj0ow+fY8x36/fV1dAFydPekgYcJircMA6qqkjIzcqvMDcOfujvDBSFzcZpKYgRda2hZ79nwJsstYqSO69ogjA/V";
+function ub64b(str){var s=atob(str),b=new Uint8Array(s.length);for(var i=0;i<s.length;i++)b[i]=s.charCodeAt(i);return b;}
+document.getElementById('vunlock').onclick=async function(){
+  var m=document.getElementById('vmsg');m.textContent='解密中…';m.style.color='var(--dim)';
+  try{
+    var all=ub64b(VBLOB),salt=all.slice(0,16),iv=all.slice(16,28),ct=all.slice(28);
+    var km=await crypto.subtle.importKey('raw',new TextEncoder().encode(document.getElementById('vpw').value),'PBKDF2',false,['deriveKey']);
+    var key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:600000,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
+    var pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:iv},key,ct);
+    var arr=JSON.parse(new TextDecoder().decode(pt));
+    var g=document.getElementById('vaultgrid');g.innerHTML='';
+    arr.forEach(function(e){
+      var d=document.createElement('div');d.className='card';
+      var b=document.createElement('b');b.textContent=e.name;d.appendChild(b);
+      if(e.url){var p1=document.createElement('p');p1.style.wordBreak='break-all';p1.textContent=e.url;d.appendChild(p1);}
+      var p2=document.createElement('p');p2.textContent=e.note;d.appendChild(p2);
+      if(e.url){var btn=document.createElement('button');btn.className='cpbtn';btn.setAttribute('data-cp',e.url);btn.textContent='复制';d.appendChild(btn);}
+      g.appendChild(d);
+    });
+    g.style.display='grid';
+    document.getElementById('vaultbox').style.display='none';
+  }catch(e){
+    m.textContent='❌ 密码不对，解不开。';m.style.color='var(--err,#f85149)';
+  }
+};
 </script>
 <script>
 (function(){
